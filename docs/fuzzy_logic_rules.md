@@ -382,9 +382,9 @@ Resultado: Información 100%
 
 La lógica difusa es ideal para análisis de sentimientos porque:
 
-✅ **Maneja imprecisión**: Las emociones no son binarias
-✅ **Considera contexto**: Palabras modifican el significado
-✅ **Es flexible**: Fácil agregar nuevas reglas
-✅ **Es interpretable**: Cada decisión es explicable
+- ✅ **Maneja imprecisión**: Las emociones no son binarias
+- ✅ **Considera contexto**: Palabras modifican el significado
+- ✅ **Es flexible**: Fácil agregar nuevas reglas
+- ✅ **Es interpretable**: Cada decisión es explicable
 
 Las reglas difusas permiten crear un sistema más humano y preciso para entender las emociones en el texto.

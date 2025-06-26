@@ -150,11 +150,11 @@ Resultado: 85% alegría, 15% información
 
 ### 8. Ventajas del Enfoque Científico
 
-✅ **Objetivo**: Basado en datos reales
-✅ **Validable**: Métricas medibles
-✅ **Escalable**: Fácil agregar nuevas palabras
-✅ **Transparente**: Cada cálculo es explicable
-✅ **Mejorable**: Iterativo basado en resultados
+- ✅ **Objetivo**: Basado en datos reales
+- ✅ **Validable**: Métricas medibles
+- ✅ **Escalable**: Fácil agregar nuevas palabras
+- ✅ **Transparente**: Cada cálculo es explicable
+- ✅ **Mejorable**: Iterativo basado en resultados
 
 ### 9. Próximos Pasos
 

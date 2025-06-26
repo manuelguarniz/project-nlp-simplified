@@ -449,9 +449,9 @@ def validate_capped_value(value, tolerance=1e-10):
 
 El concepto de **"capped"** es fundamental en lógica difusa porque:
 
-✅ **Mantiene consistencia**: Todos los valores están en el rango 0-1
-✅ **Previene errores**: Evita valores inválidos
-✅ **Facilita interpretación**: Los resultados son siempre interpretables
-✅ **Mejora robustez**: El sistema es más estable
+- ✅ **Mantiene consistencia**: Todos los valores están en el rango 0-1
+- ✅ **Previene errores**: Evita valores inválidos
+- ✅ **Facilita interpretación**: Los resultados son siempre interpretables
+- ✅ **Mejora robustez**: El sistema es más estable
 
 La implementación correcta del capping es esencial para un sistema de análisis de sentimientos confiable y preciso. 

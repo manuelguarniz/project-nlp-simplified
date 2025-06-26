@@ -500,9 +500,9 @@ for result in performance_results:
 
 La búsqueda en árbol es un algoritmo eficiente y efectivo para el análisis de sentimientos. Sus principales ventajas son:
 
-✅ **Eficiencia**: Complejidad O(h) donde h es la altura del árbol
-✅ **Interpretabilidad**: Cada decisión es clara y explicable
-✅ **Flexibilidad**: Fácil modificar y extender
-✅ **Precisión**: Puede manejar casos complejos con múltiples sentimientos
+- ✅ **Eficiencia**: Complejidad O(h) donde h es la altura del árbol
+- ✅ **Interpretabilidad**: Cada decisión es clara y explicable
+- ✅ **Flexibilidad**: Fácil modificar y extender
+- ✅ **Precisión**: Puede manejar casos complejos con múltiples sentimientos
 
 El algoritmo se adapta perfectamente a nuestro sistema de análisis de sentimientos basado en árboles de decisión y lógica difusa.
