@@ -106,7 +106,7 @@ flowchart TD
     I --> J
   
     J --> K{¿Hay Negaciones?}
-    K -->|Sí| L[Aplicar ×(- 0.8)]
+    K -->|Sí| L[Aplicar × - 0.8]
     K -->|No| M[Continuar]
   
     L --> N[Regla 4: Combinación]
