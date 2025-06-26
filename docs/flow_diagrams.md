@@ -280,7 +280,7 @@ flowchart TD
     N --> O[Normalizar Resultados]
   
     O --> P[Formatear Salida]
-    P --> Q[Mostrar: "X% Alegría, Y% Tristeza..."]
+    P --> Q[Mostrar: X% Alegría, Y% Tristeza...]
   
     Q --> R{¿Analizar Otro Texto?}
     R -->|Sí| A
@@ -362,8 +362,11 @@ flowchart TD
 ### **Ventajas de estos Diagramas:**
 
 ✅ **Claridad visual**: Fácil de entender el flujo
+
 ✅ **Documentación**: Ayuda a explicar el sistema
+
 ✅ **Debugging**: Facilita identificar problemas
+
 ✅ **Mantenimiento**: Fácil de actualizar y modificar
 
 Estos diagramas proporcionan una visión completa del sistema de análisis de sentimientos, desde la entrada del texto hasta la generación de resultados finales.
