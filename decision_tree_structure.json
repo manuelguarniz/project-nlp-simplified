@@ -1,0 +1,400 @@
+{
+  "decision_tree": {
+    "root": {
+      "id": "root",
+      "condition": "has_emotion_words",
+      "description": "Verificar si el texto contiene palabras emocionales",
+      "true_branch": "positive_check",
+      "false_branch": "neutral_check",
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.8,
+        "sorpresa": 0.0
+      }
+    },
+    "positive_check": {
+      "id": "positive_check",
+      "condition": "has_positive_words",
+      "description": "Verificar si hay palabras positivas",
+      "true_branch": "joy_intensity",
+      "false_branch": "negative_check",
+      "sentiment_scores": {
+        "alegria": 0.3,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.2,
+        "sorpresa": 0.0
+      }
+    },
+    "negative_check": {
+      "id": "negative_check",
+      "condition": "has_negative_words",
+      "description": "Verificar si hay palabras negativas",
+      "true_branch": "sadness_anger_check",
+      "false_branch": "neutral_emotion",
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.3,
+        "enojo": 0.3,
+        "preocupacion": 0.0,
+        "informacion": 0.2,
+        "sorpresa": 0.0
+      }
+    },
+    "joy_intensity": {
+      "id": "joy_intensity",
+      "condition": "has_high_intensity_joy",
+      "description": "Verificar intensidad de alegría",
+      "true_branch": "very_happy",
+      "false_branch": "moderately_happy",
+      "sentiment_scores": {
+        "alegria": 0.6,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.1,
+        "sorpresa": 0.0
+      }
+    },
+    "very_happy": {
+      "id": "very_happy",
+      "condition": "has_very_strong_joy_words",
+      "description": "Palabras de muy alta intensidad de alegría",
+      "true_branch": null,
+      "false_branch": null,
+      "sentiment_scores": {
+        "alegria": 0.9,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.05,
+        "sorpresa": 0.0
+      }
+    },
+    "moderately_happy": {
+      "id": "moderately_happy",
+      "condition": "has_moderate_joy_words",
+      "description": "Palabras de intensidad moderada de alegría",
+      "true_branch": null,
+      "false_branch": null,
+      "sentiment_scores": {
+        "alegria": 0.7,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.15,
+        "sorpresa": 0.0
+      }
+    },
+    "sadness_anger_check": {
+      "id": "sadness_anger_check",
+      "condition": "has_sadness_words",
+      "description": "Verificar si hay palabras de tristeza",
+      "true_branch": "sadness_intensity",
+      "false_branch": "anger_check",
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.5,
+        "enojo": 0.2,
+        "preocupacion": 0.0,
+        "informacion": 0.1,
+        "sorpresa": 0.0
+      }
+    },
+    "sadness_intensity": {
+      "id": "sadness_intensity",
+      "condition": "has_high_intensity_sadness",
+      "description": "Verificar intensidad de tristeza",
+      "true_branch": "very_sad",
+      "false_branch": "moderately_sad",
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.8,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.05,
+        "sorpresa": 0.0
+      }
+    },
+    "very_sad": {
+      "id": "very_sad",
+      "condition": "has_very_strong_sadness_words",
+      "description": "Palabras de muy alta intensidad de tristeza",
+      "true_branch": null,
+      "false_branch": null,
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.95,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.02,
+        "sorpresa": 0.0
+      }
+    },
+    "moderately_sad": {
+      "id": "moderately_sad",
+      "condition": "has_moderate_sadness_words",
+      "description": "Palabras de intensidad moderada de tristeza",
+      "true_branch": null,
+      "false_branch": null,
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.75,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.1,
+        "sorpresa": 0.0
+      }
+    },
+    "anger_check": {
+      "id": "anger_check",
+      "condition": "has_anger_words",
+      "description": "Verificar si hay palabras de enojo",
+      "true_branch": "anger_intensity",
+      "false_branch": "worry_check",
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.5,
+        "preocupacion": 0.2,
+        "informacion": 0.1,
+        "sorpresa": 0.0
+      }
+    },
+    "anger_intensity": {
+      "id": "anger_intensity",
+      "condition": "has_high_intensity_anger",
+      "description": "Verificar intensidad de enojo",
+      "true_branch": "very_angry",
+      "false_branch": "moderately_angry",
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.8,
+        "preocupacion": 0.0,
+        "informacion": 0.05,
+        "sorpresa": 0.0
+      }
+    },
+    "very_angry": {
+      "id": "very_angry",
+      "condition": "has_very_strong_anger_words",
+      "description": "Palabras de muy alta intensidad de enojo",
+      "true_branch": null,
+      "false_branch": null,
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.95,
+        "preocupacion": 0.0,
+        "informacion": 0.02,
+        "sorpresa": 0.0
+      }
+    },
+    "moderately_angry": {
+      "id": "moderately_angry",
+      "condition": "has_moderate_anger_words",
+      "description": "Palabras de intensidad moderada de enojo",
+      "true_branch": null,
+      "false_branch": null,
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.75,
+        "preocupacion": 0.0,
+        "informacion": 0.1,
+        "sorpresa": 0.0
+      }
+    },
+    "worry_check": {
+      "id": "worry_check",
+      "condition": "has_worry_words",
+      "description": "Verificar si hay palabras de preocupación",
+      "true_branch": "worry_intensity",
+      "false_branch": "surprise_check",
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.5,
+        "informacion": 0.2,
+        "sorpresa": 0.0
+      }
+    },
+    "worry_intensity": {
+      "id": "worry_intensity",
+      "condition": "has_high_intensity_worry",
+      "description": "Verificar intensidad de preocupación",
+      "true_branch": "very_worried",
+      "false_branch": "moderately_worried",
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.8,
+        "informacion": 0.1,
+        "sorpresa": 0.0
+      }
+    },
+    "very_worried": {
+      "id": "very_worried",
+      "condition": "has_very_strong_worry_words",
+      "description": "Palabras de muy alta intensidad de preocupación",
+      "true_branch": null,
+      "false_branch": null,
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.9,
+        "informacion": 0.05,
+        "sorpresa": 0.0
+      }
+    },
+    "moderately_worried": {
+      "id": "moderately_worried",
+      "condition": "has_moderate_worry_words",
+      "description": "Palabras de intensidad moderada de preocupación",
+      "true_branch": null,
+      "false_branch": null,
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.7,
+        "informacion": 0.15,
+        "sorpresa": 0.0
+      }
+    },
+    "surprise_check": {
+      "id": "surprise_check",
+      "condition": "has_surprise_words",
+      "description": "Verificar si hay palabras de sorpresa",
+      "true_branch": "surprise_intensity",
+      "false_branch": "neutral_emotion",
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.3,
+        "sorpresa": 0.5
+      }
+    },
+    "surprise_intensity": {
+      "id": "surprise_intensity",
+      "condition": "has_high_intensity_surprise",
+      "description": "Verificar intensidad de sorpresa",
+      "true_branch": "very_surprised",
+      "false_branch": "moderately_surprised",
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.1,
+        "sorpresa": 0.8
+      }
+    },
+    "very_surprised": {
+      "id": "very_surprised",
+      "condition": "has_very_strong_surprise_words",
+      "description": "Palabras de muy alta intensidad de sorpresa",
+      "true_branch": null,
+      "false_branch": null,
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.05,
+        "sorpresa": 0.9
+      }
+    },
+    "moderately_surprised": {
+      "id": "moderately_surprised",
+      "condition": "has_moderate_surprise_words",
+      "description": "Palabras de intensidad moderada de sorpresa",
+      "true_branch": null,
+      "false_branch": null,
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.15,
+        "sorpresa": 0.7
+      }
+    },
+    "neutral_check": {
+      "id": "neutral_check",
+      "condition": "has_informational_words",
+      "description": "Verificar si hay palabras informativas",
+      "true_branch": "informational",
+      "false_branch": "neutral_emotion",
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.6,
+        "sorpresa": 0.0
+      }
+    },
+    "informational": {
+      "id": "informational",
+      "condition": "is_purely_informational",
+      "description": "Texto puramente informativo",
+      "true_branch": null,
+      "false_branch": null,
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.95,
+        "sorpresa": 0.0
+      }
+    },
+    "neutral_emotion": {
+      "id": "neutral_emotion",
+      "condition": "is_neutral",
+      "description": "Texto neutral sin emociones claras",
+      "true_branch": null,
+      "false_branch": null,
+      "sentiment_scores": {
+        "alegria": 0.0,
+        "tristeza": 0.0,
+        "enojo": 0.0,
+        "preocupacion": 0.0,
+        "informacion": 0.8,
+        "sorpresa": 0.0
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "description": "Árbol de decisión para análisis de sentimientos",
+    "sentiment_categories": [
+      "alegria",
+      "tristeza",
+      "enojo",
+      "preocupacion",
+      "informacion",
+      "sorpresa"
+    ],
+    "score_range": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "tree_properties": {
+      "max_depth": 6,
+      "total_nodes": 25,
+      "leaf_nodes": 12
+    }
+  }
+}
