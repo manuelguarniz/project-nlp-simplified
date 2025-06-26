@@ -62,17 +62,17 @@ sentiment_analyzer/
 
 **Hora 1: Análisis de Requisitos (60 min)**
 
-- [X] Definir estructura de datos para árbol de decisión
-- [X] Diseñar diccionarios de palabras clave por sentimiento
-- [X] Planificar algoritmo de búsqueda en árbol
-- [X] Definir reglas de lógica difusa
+- [X] Definir estructura de datos para árbol de decisión: [decision_tree_structure.json](../resources/decision_tree_structure.json)
+- [X] Diseñar diccionarios de palabras clave por sentimiento: [sentiment_keywords.json](../resources/sentiment_keywords.json)
+- [X] Planificar algoritmo de búsqueda en árbol: [tree_search_algorithm.md](../docs/tree_search_algorithm.md)
+- [X] Definir reglas de lógica difusa: [fuzzy_logic_rules.md](../docs/fuzzy_logic_rules.md)
 
 **Hora 2: Diseño de Arquitectura (60 min)**
 
-- [ ] Crear diagrama de flujo del sistema
-- [ ] Definir interfaces entre módulos
-- [ ] Diseñar estructura de clases
-- [ ] Planificar casos de prueba
+- [X] Crear diagrama de flujo del sistema: [flow_diagrams.md](../docs/flow_diagrams.md)
+- [X] Definir interfaces entre módulos: [module_interfaces.md](../docs/module_interfaces.md) > [system_config.json](../resources/system_config.json)
+- [X] Diseñar estructura de clases: [technical_specifications.md](../docs/technical_specifications.md) > [architecture_diagram.md](../docs/architecture_diagram.md)
+- [X] Planificar casos de prueba: [test_cases.md](../docs/test_cases.md)
 
 #### **Día 2: Implementación Base (2 horas)**
 

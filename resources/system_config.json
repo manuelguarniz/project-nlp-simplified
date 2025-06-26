@@ -1,0 +1,48 @@
+{
+  "max_text_length": 50,
+  "min_confidence": 0.3,
+  "enable_fuzzy_logic": true,
+  "enable_memoization": true,
+  "sentiment_thresholds": {
+    "alegria": 0.4,
+    "tristeza": 0.4,
+    "enojo": 0.4,
+    "preocupacion": 0.4,
+    "informacion": 0.3,
+    "sorpresa": 0.4
+  },
+  "fuzzy_parameters": {
+    "intensification_factor": 1.5,
+    "attenuation_factor": 0.7,
+    "negation_factor": 0.3,
+    "mixed_emotion_threshold": 0.6,
+    "context_weight": 0.3
+  },
+  "preprocessing": {
+    "remove_punctuation": true,
+    "convert_to_lowercase": true,
+    "remove_stopwords": false,
+    "stemming": false,
+    "max_word_length": 20
+  },
+  "tree_search": {
+    "max_depth": 10,
+    "timeout_seconds": 5,
+    "enable_backtracking": true,
+    "cache_size": 1000
+  },
+  "output_format": {
+    "include_confidence": true,
+    "include_processing_time": true,
+    "include_matched_keywords": true,
+    "include_tree_path": true,
+    "include_modifiers": true,
+    "round_decimals": 3
+  },
+  "logging": {
+    "level": "INFO",
+    "enable_file_logging": true,
+    "log_file": "sentiment_analysis.log",
+    "enable_console_logging": true
+  }
+}
